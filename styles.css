@@ -108,3 +108,7 @@ ul {
 .sb{
     display: flex;
 }
+
+.bb{
+    padding-right: 100px;
+}
