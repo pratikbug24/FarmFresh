@@ -25,6 +25,8 @@ FarmFresh is a modern and responsive **fruit shop website** that allows users to
 * **Tools:** VS Code, Git, GitHub
 
 ---
+## 📸 Screenshots
+
 <img src="./assest/Screenshot 2025-12-14 165346.png">
 <img src="./assest/Screenshot 2025-12-14 165502.png">
 <img src="./assest/Screenshot 2025-12-14 165640.png">
@@ -69,13 +71,7 @@ cd FarmFresh
 
 * Open `index.html` directly in your browser
   **OR**
-* Use XAMPP/WAMP and place the folder inside `htdocs` if using PHP
-
----
-
-## 📸 Screenshots
-
-> *(Add screenshots of Home page, Cart page here for better presentation)*
+* Use XAMPP/WAMP and place the folder inside `htdocs` if using 
 
 ---
 
