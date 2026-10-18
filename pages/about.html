@@ -6,6 +6,10 @@
     <title>About Us - FarmFresh Foods</title>
     
     <!-- Bootstrap 5 CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
@@ -15,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="modern-styles.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
     
     <style>
         .about-hero {
@@ -79,37 +83,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="fas fa-leaf text-success me-2"></i>
-                <span class="fw-bold text-success">FarmFresh Foods</span>
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contect.html">Contact</a>
-                    </li>
-                </ul>
-                
-                <div class="d-flex align-items-center">
-                    <a href="login.php" class="btn btn-outline-success me-2">Login</a>
-                    <a href="registraction.php" class="btn btn-success">Sign Up</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="site-nav"></div>
 
     <!-- Hero Section -->
     <section class="about-hero">
@@ -122,7 +96,7 @@
                     </p>
                     <div class="animate__animated animate__fadeInUp animate__delay-2s">
                         <a href="#story" class="btn btn-light btn-lg me-3">Our Story</a>
-                        <a href="contect.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -151,7 +125,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="apple.png" alt="Fresh Produce" class="img-fluid rounded shadow">
+                    <img src="../assest/images/apple.png" alt="Fresh Produce" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -312,8 +286,8 @@
                     <p class="lead mb-4">
                         Join thousands of satisfied customers who trust us for their daily fresh produce needs.
                     </p>
-                    <a href="index.html" class="btn btn-light btn-lg me-3">Shop Now</a>
-                    <a href="contect.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    <a href="../index.html" class="btn btn-light btn-lg me-3">Shop Now</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -348,5 +322,9 @@
             });
         });
     </script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/store.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script>window.FarmFreshUI.init({ active: "About" });</script>
 </body>
 </html>

@@ -27,12 +27,12 @@ FarmFresh is a modern and responsive **fruit shop website** that allows users to
 ---
 ## 📸 Screenshots
 
-<img src="./assest/Screenshot 2025-12-14 165346.png">
-<img src="./assest/Screenshot 2025-12-14 165502.png">
-<img src="./assest/Screenshot 2025-12-14 165640.png">
-<img src="./assest/Screenshot 2025-12-14 165912.png">
-<img src="./assest/Screenshot 2025-12-14 165823.png">
-<img src="./assest/Screenshot 2025-12-14 165712.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165346.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165502.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165640.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165912.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165823.png">
+<img src="./assest/images/screenshots/Screenshot 2025-12-14 165712.png">
 ---
 
 ## 📂 Project Structure
