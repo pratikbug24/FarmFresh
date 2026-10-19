@@ -11,90 +11,159 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assest/css/main.css">
+    <link rel="stylesheet" href="../assest/css/auth.css">
 </head>
 <body>
     <div id="site-nav"></div>
 
-    <section class="auth-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="auth-card text-center">
-                        <span class="auth-icon"><i class="fas fa-user-plus"></i></span>
-                        <h2 class="mb-1">Create Your Account</h2>
-                        <p class="text-muted mb-4">Join FarmFresh and get fresh produce delivered.</p>
+    <main class="auth-page">
+        <!-- Brand showcase -->
+        <aside class="auth-aside">
+            <span class="auth-blob auth-blob--one"></span>
+            <span class="auth-blob auth-blob--two"></span>
 
-                        <div id="formAlert" class="d-none"></div>
+            <a class="auth-brand" href="../index.html">
+                <i class="fas fa-leaf"></i>
+                FarmFresh Foods
+            </a>
 
-                        <form id="registerForm" class="text-start" novalidate>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="name" class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" id="name" autocomplete="name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="username" class="form-label">Username *</label>
-                                    <input type="text" class="form-control" id="username" autocomplete="username" required>
-                                    <div class="form-text">At least 3 characters.</div>
-                                </div>
-                            </div>
+            <div class="auth-aside-body">
+                <span class="auth-eyebrow">Join the harvest</span>
+                <h2>Fresh produce, <em>delivered fast</em>.</h2>
+                <p class="auth-aside-lede">
+                    Create your free account and get farm-to-table groceries at your door.
+                </p>
 
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email *</label>
-                                    <input type="email" class="form-control" id="email" autocomplete="email" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="phone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="phone" autocomplete="tel">
-                                </div>
-                            </div>
+                <ul class="auth-benefits">
+                    <li><i class="fas fa-check"></i> Free delivery on your first order</li>
+                    <li><i class="fas fa-check"></i> Exclusive member-only prices</li>
+                    <li><i class="fas fa-check"></i> Track every order in real time</li>
+                </ul>
+            </div>
 
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="password" class="form-label">Password *</label>
-                                    <div class="input-group">
-                                        <input type="password" class="form-control" id="password" autocomplete="new-password" required>
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword" aria-label="Show password">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                    </div>
-                                    <div class="form-text">At least 6 characters.</div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
-                                    <input type="password" class="form-control" id="confirmPassword" autocomplete="new-password" required>
-                                </div>
-                            </div>
-
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" id="terms" required>
-                                <label class="form-check-label" for="terms">
-                                    I agree to the terms of service and privacy policy
-                                </label>
-                            </div>
-
-                            <button type="submit" class="btn btn-success w-100 py-2">
-                                <i class="fas fa-user-plus me-2"></i>Sign Up
-                            </button>
-                        </form>
-
-                        <div class="auth-divider">Already have an account?</div>
-                        <a href="login.html" class="btn btn-outline-success w-100">
-                            <i class="fas fa-sign-in-alt me-2"></i>Sign in
-                        </a>
+            <div class="auth-aside-foot">
+                <div class="auth-proof">
+                    <div class="auth-avatars">
+                        <span>A</span><span>M</span><span>R</span>
                     </div>
+                    <span>Joined by 12,000+ happy customers</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </aside>
+
+        <!-- Form -->
+        <section class="auth-panel">
+            <div class="auth-card">
+                <header class="auth-head">
+                    <span class="auth-pill"><i class="fas fa-seedling"></i> Get started</span>
+                    <h1>Create your account</h1>
+                    <p>It takes less than a minute to start shopping fresh.</p>
+                </header>
+
+                <div id="formAlert" class="d-none"></div>
+
+                <div class="auth-social">
+                    <button type="button" class="btn"><i class="fab fa-google"></i> Google</button>
+                    <button type="button" class="btn"><i class="fab fa-apple"></i> Apple</button>
+                </div>
+
+                <div class="auth-divider">or sign up with email</div>
+
+                <form id="registerForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="name">Full Name *</label>
+                                <div class="auth-input">
+                                    <i class="fas fa-id-card"></i>
+                                    <input type="text" id="name" placeholder="Jane Doe" autocomplete="name" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="username">Username *</label>
+                                <div class="auth-input">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="username" placeholder="janedoe" autocomplete="username" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="email">Email *</label>
+                                <div class="auth-input">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" placeholder="jane@example.com" autocomplete="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="phone">Phone</label>
+                                <div class="auth-input">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" placeholder="+91 98765 43210" autocomplete="tel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="password">Password *</label>
+                                <div class="auth-input auth-input--toggle">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" placeholder="At least 6 characters" autocomplete="new-password" required>
+                                    <button class="auth-toggle" type="button" id="togglePassword" aria-label="Show password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="auth-strength" id="passwordStrength" data-level="0">
+                                    <div class="auth-strength-bars">
+                                        <span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <span class="auth-strength-label">Strength</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="auth-field mb-0">
+                                <label for="confirmPassword">Confirm Password *</label>
+                                <div class="auth-input">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="auth-check mt-4 mb-4" for="terms">
+                        <input type="checkbox" id="terms" required>
+                        <span>I agree to the <a href="#" class="auth-link">terms of service</a> and <a href="#" class="auth-link">privacy policy</a></span>
+                    </label>
+
+                    <button type="submit" class="btn-auth">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </button>
+                </form>
+
+                <p class="auth-foot">
+                    Already have an account? <a href="login.html">Sign in</a>
+                </p>
+
+                <p class="auth-secure">
+                    <i class="fas fa-shield-halved"></i> Your data is protected with secure encryption
+                </p>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/data.js"></script>
-    <script src="../assets/js/store.js"></script>
-    <script src="../assets/js/ui.js"></script>
-    <script src="../assets/js/auth.js"></script>
+    <script src="../assest/js/data.js"></script>
+    <script src="../assest/js/store.js"></script>
+    <script src="../assest/js/ui.js"></script>
+    <script src="../assest/js/auth.js"></script>
 </body>
 </html>
