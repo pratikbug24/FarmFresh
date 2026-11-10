@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btnViewCart.setOnClickListener(v ->
                 startActivity(new Intent(this, CartActivity.class)));
 
+        BottomNavHelper.setup(this, R.id.nav_home);   // bottom menu bar
         updateCartBar();
     }
 
@@ -72,5 +73,7 @@ public class MainActivity extends AppCompatActivity {
             btnViewCart.setText("View Cart  •  " + count + " item(s)  •  ₹"
                     + (int) cart.getSubtotal());
         }
+
+        BottomNavHelper.refreshBadge(this);   // outside the if/else, so the badge clears at 0
     }
 }

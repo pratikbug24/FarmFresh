@@ -43,6 +43,8 @@ public class CartActivity extends AppCompatActivity {
 
         adapter.refresh();
         updateSummary();
+
+        BottomNavHelper.setup(this, R.id.nav_cart);   // bottom menu bar
     }
 
     private void updateSummary() {
@@ -54,11 +56,12 @@ public class CartActivity extends AppCompatActivity {
         double fee = cart.getDeliveryFee();
         tvDelivery.setText(fee == 0 ? "FREE" : "₹" + (int) fee);
         tvTotal.setText("₹" + (int) cart.getGrandTotal());
+
+        Object BottomNavHelper;
+        BottomNavHelper.refreshBadge(this);           // cart count badge
     }
 
     private void placeOrder() {
-        // TODO: send the order to your PHP/MySQL backend here (POST /api/orders.php)
-        // and open a payment screen once you add a payment gateway.
         new AlertDialog.Builder(this)
                 .setTitle("Confirm order")
                 .setMessage("Place order for ₹" + (int) cart.getGrandTotal() + "?")
@@ -68,11 +71,3 @@ public class CartActivity extends AppCompatActivity {
                     adapter.refresh();
                     updateSummary();
                     new AlertDialog.Builder(this)
-                            .setTitle("Order placed 🎉")
-                            .setMessage("Thank you! Your fresh fruits are on the way.")
-                            .setPositiveButton("OK", (d2, w2) -> finish())
-                            .show();
-                })
-                .show();
-    }
-}
