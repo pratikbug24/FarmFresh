@@ -21,5 +21,9 @@
         <activity
             android:name=".CartActivity"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".AccountActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 </manifest>
