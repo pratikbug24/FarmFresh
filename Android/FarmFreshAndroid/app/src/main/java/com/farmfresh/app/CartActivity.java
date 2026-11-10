@@ -57,7 +57,6 @@ public class CartActivity extends AppCompatActivity {
         tvDelivery.setText(fee == 0 ? "FREE" : "₹" + (int) fee);
         tvTotal.setText("₹" + (int) cart.getGrandTotal());
 
-        Object BottomNavHelper;
         BottomNavHelper.refreshBadge(this);           // cart count badge
     }
 
@@ -71,3 +70,12 @@ public class CartActivity extends AppCompatActivity {
                     adapter.refresh();
                     updateSummary();
                     new AlertDialog.Builder(this)
+                            .setTitle("Order placed 🎉")
+                            .setMessage("Thank you! Your fresh fruits are on the way.")
+                            .setCancelable(false)
+                            .setPositiveButton("OK", (d2, w2) -> finish())
+                            .show();
+                })
+                .show();
+    }
+}
